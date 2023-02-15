@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Gian's Basic Calculator</h1>
+    </div>
+    <div class="main">
+        <form action="./index.html" id="frm">
+            <div class="inputs">
+                <div class="input1">
+                    <label for="num1">Enter First Number</label>
+                    <input type="number" name="num1" id="num1" class="inbox">
+                </div>
+                <div class="input2">
+                    <label for="num2">Enter Second Number</label>
+                <input type="number" name="num2" id="num2" class="inbox">
+                </div>
+            </div>
+        </form>
+        <div class="cont">
+            <h2 style="text-align: center;">Select an Operator</h2>
+            <div class="btns">
+                <button onclick="addfunc()" class="btn add">+</button>
+                <button onclick="subfunc()" class="btn sub">-</button>
+                <button onclick="multfunc()" class="btn mult">x</button>
+                <button onclick="divfunc()" class="btn divi">/</button>
+                <button onclick="remafunc()" class="btn rema">%</button>
+                <button onclick="clearfunc();cfunc()" class="btn clr">AC</button>
+                
+            </div>
+        </div>
+        <div class="answ">
+            <h2>The Answer is: <span id="ansb"></span></h2>
+        </div>
+
+    </div>
+</body>
+<script>
+    function addfunc(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let ans = num1 + num2;
+        document.getElementById("ansb").innerHTML = ans;
+    }
+    function subfunc(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let ans = num1 - num2;
+        document.getElementById("ansb").innerHTML = ans;
+    }
+    function multfunc(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let ans = num1 * num2;
+        document.getElementById("ansb").innerHTML = ans;
+    }
+    function divfunc(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let ans = num1 / num2;
+        document.getElementById("ansb").innerHTML = ans;
+    }
+    function remafunc(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let ans = num1 % num2;
+        document.getElementById("ansb").innerHTML = ans;
+    }
+   function clearfunc(){
+    document.getElementById("ansb").innerHTML = "";
+   }
+   function cfunc(){
+    document.getElementById("frm").reset()
+   }
+   
+</script>
+</html>

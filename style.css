@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #daeef0;
+}
+.header{
+    text-align: center;
+    padding: 5px;
+    background-color: #f5f77c;
+    border: 5px solid royalblue;
+    border-radius: 20px;
+}
+#frm{
+   display: block;
+    margin: auto;
+}
+.main{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f5f77c;
+    width: 89vw;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 0.6fr 0.5fr 0.5fr;
+    border: 5px solid royalblue;
+    border-radius: 20px;
+}
+
+
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    font-weight: 900;
+    font-size: 1.2em;
+    text-align: center;
+    align-content: center;
+    white-space: pre-line;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width:633px){
+    .inputs{
+        
+        grid-template-columns: repeat(auto-fit, 150px);
+        justify-content: center;
+    }
+
+}
+
+.inputs .inbox{
+    
+    border-radius: 10px;
+    width: 150px;
+    margin-top: 10px;
+    height: 50px;
+    font-size: 1.2em;
+    border: 3px solid royalblue; 
+    transition: border-bottom 0.2s, background-color 0.5s, box-shadow;
+    outline: none;
+}
+
+/*For removing arrrows in number type form*/
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.inbox:focus{
+    border-bottom: 6px solid forestgreen;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px seagreen;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(6,10vw);
+    grid-template-rows: 10vw;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and  (max-width:375px){
+    .btns{
+        grid-template-columns: repeat(3,10vw);
+    }
+}
+.btn{
+    width: 7vw;
+    height: 7vw;
+    background-color: darkgray;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    font-weight: 700;
+}
+.clr{
+    background-color: darkred;
+}
+.btn:hover{
+    background-color: lightgreen;
+    box-shadow: 0 0 10px seagreen;
+}
+@media only screen and (max-width:626px){
+    .btn{
+        font-size: 1em;
+    }
+
+    
+}
+@media only screen and (max-width:375px){
+    .btn{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+.answ{
+    text-align: center;
+}
+#ansb{
+    color: brown;
+    text-decoration: underline;
+}
